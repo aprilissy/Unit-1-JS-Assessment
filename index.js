@@ -5,13 +5,13 @@
 // 👇 COMPLETE YOUR WORK BELOW 👇
 */
 
-const {
-  height,
-  name,
-  mass,
-  films,
-  homeworld
-} = require("./data/fixtures-bundle");
+// const {
+//   height,
+//   name,
+//   mass,
+//   films,
+//   homeworld
+// } = require("./data/fixtures-bundle");
 
 /**
  * ### Challenge `getName`
