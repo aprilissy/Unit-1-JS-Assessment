@@ -9,7 +9,8 @@ const {
   height,
   name,
   mass,
-  films
+  films,
+  homeworld
 } = require("./data/fixtures-bundle");
 
 /**
@@ -78,7 +79,10 @@ function getSummary(character) {
  * Sample data expected output: 8000
  */
 function getVehiclesCostInCreditsSumTotal(character) {
-  // TODO: Add your code here.
+  const cost = character.vehicles.reduce(function (accumulator, item) {
+    return (accumulator + item.cost_in_credits);
+  }, 0);
+  return cost;
 }
 
 /**
