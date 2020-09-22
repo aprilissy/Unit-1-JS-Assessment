@@ -96,8 +96,25 @@ function getVehiclesCostInCreditsSumTotal(character) {
  * Sample data expected output: 27
  */
 function getStarshipPassengerAndCrewSumTotal(character) {
-  // TODO: Add your code here.
+  const space = character.starships.reduce(function (accumulator, item) {
+    return (accumulator + item.crew + item.passengers);
+  }, 0);
+  return space;
 }
+
+
+// function getAverageGoals(data) {
+//     const home = data.reduce(function (accumulator, item) {
+//         return (accumulator + item['Home Team Goals']);
+//     }, 0);
+//     const away = data.reduce(function (accumulator, item) {
+//         return (accumulator + item['Away Team Goals']);
+//     }, 0);
+//     console.log(home, away);
+//     return [home:, away:] ;
+// };
+
+// console.log(getAverageGoals(fifaData));
 
 /**
  * ### Challenge `getNthFilm`
