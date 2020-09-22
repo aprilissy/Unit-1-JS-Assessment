@@ -102,20 +102,6 @@ function getStarshipPassengerAndCrewSumTotal(character) {
   return space;
 }
 
-
-// function getAverageGoals(data) {
-//     const home = data.reduce(function (accumulator, item) {
-//         return (accumulator + item['Home Team Goals']);
-//     }, 0);
-//     const away = data.reduce(function (accumulator, item) {
-//         return (accumulator + item['Away Team Goals']);
-//     }, 0);
-//     console.log(home, away);
-//     return [home:, away:] ;
-// };
-
-// console.log(getAverageGoals(fifaData));
-
 /**
  * ### Challenge `getNthFilm`
  * MVP Challenge 🤓
@@ -130,7 +116,11 @@ function getStarshipPassengerAndCrewSumTotal(character) {
  * Given film #7, expected error: `There are only 3 Star Wars movies. Flan fiction excluded.`
  */
 function getNthFilm(character, filmNumber) {
-  // TODO: Add your code here.
+  if (filmNumber < 1 || filmNumber > 3) {
+    return `Error: The Princess Bride is missing. The ceremony is canceled.`;
+  } else {
+    return character.films[filmNumber - 1];
+  }
 }
 
 /**
